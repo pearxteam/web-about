@@ -1,4 +1,4 @@
-<#macro page title="" selected="" footer=true fill=false>
+<#macro page title="" selected="">
     <!doctype html>
     <html lang="en">
     <head>
@@ -21,46 +21,45 @@
                 crossorigin="anonymous"></script>
         <title>${title} | PearX Team</title>
     </head>
-
     <body>
-        <nav class="navbar navbar-expand navbar-dark">
-            <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link<#if selected == "home"> active</#if>" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link<#if selected == "members"> active</#if>" href="/members">Members</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="mx-auto my-2 order-0 order-md-1 position-relative">
-                <img src="/favicon.png" width="64" height="64" alt="logo">
-            </div>
-            <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
-                <ul class="navbar-nav mr-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link<#if selected == "projects"> active</#if>" href="/projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link<#if selected == "skills"> active</#if>" href="/skills">Skills</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand navbar-dark">
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link<#if selected == "home"> active</#if>" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link<#if selected == "members"> active</#if>" href="/members">Members</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+            <img src="/favicon.png" width="64" height="64" alt="logo">
+        </div>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+            <ul class="navbar-nav mr-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link<#if selected == "projects"> active</#if>" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link<#if selected == "skills"> active</#if>" href="/skills">Skills</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <div class="nested">
         <#nested/>
+    </div>
 
-        <#if footer>
-            <footer class="footer">
-                <div align="center" class="container pt-3 pb-3 text-muted">
-            <span>Copyright © <a href="/" class="text-info">PearX Team</a>, <a href="https://en.wikipedia.org/wiki/2018"
-                                                                               class="text-muted">2018</a></span>
-                    <br>
-                    <span>Made with ❤ by <a href="/members#mrapplexz" class="text-info">mrAppleXZ</a></span>
-                </div>
-            </footer>
-        </#if>
+    <footer class="footer">
+        <div align="center" class="container pt-3 pb-3 text-muted">
+        <span>Copyright © <a href="/" class="text-info">PearX Team</a>, <a href="https://en.wikipedia.org/wiki/2018"
+                                                                           class="text-muted">2018</a></span>
+            <br>
+            <span>Made with ❤ by <a href="/members#mrapplexz" class="text-info">mrAppleXZ</a></span>
+        </div>
+    </footer>
     </body>
     </html>
 </#macro>

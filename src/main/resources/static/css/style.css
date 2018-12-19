@@ -1,3 +1,16 @@
+html, body {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #fffbf7;
+    color: #292929;
+}
+
 .navbar {
     height:48px;
     background-color: #292929;
@@ -8,14 +21,13 @@
     background-color: #292929;
 }
 
-body {
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: #fffbf7;
-    color: #292929;
+.nested {
+    flex: 1;
 }
 
 .parallax {
     background-image: url("/images/photo.jpeg");
+    height: 100%;
     color: white;
     background-attachment: fixed;
     background-position: center;
