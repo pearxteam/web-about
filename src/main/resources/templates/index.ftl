@@ -1,9 +1,8 @@
 <#include "macros/page.ftl" />
 
-<@page title="Main Page" selected="home">
-    <center>
-        <#list 1..10 as i>
-            <h1>TODO</h1>
-        </#list>
-    </center>
+<@page title="Home" selected="home" fill=false>
+    <div class="parallax">
+        <div class="parallax-container"><span class="parallax-header">PearX Team</span></div>
+        <div class="parallax-container"><span class="parallax-text">A small team that develops something</span></div>
+    </div>
 </@page>

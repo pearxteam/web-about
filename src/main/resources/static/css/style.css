@@ -1,8 +1,46 @@
 .navbar {
     height:48px;
-    background-color: #292929
+    background-color: #292929;
+    z-index: 100;
+}
+
+.footer {
+    background-color: #292929;
 }
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
+    background-color: #fffbf7;
+    color: #292929;
+}
+
+.parallax {
+    background-image: url("/images/photo.jpeg");
+    color: white;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parallax-container {
+    margin-bottom: 10px;
+}
+
+.parallax-header {
+    padding: 10px;
+    font-size: 2.5rem;
+    background-color: rgba(41, 41, 41, 0.85);
+    letter-spacing: 7px;
+}
+
+.parallax-text {
+    padding: 3px;
+    font-size: 1.3rem;
+    background-color: rgba(41, 41, 41, 0.85);
 }
