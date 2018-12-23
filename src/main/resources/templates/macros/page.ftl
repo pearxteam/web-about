@@ -53,10 +53,8 @@
     </div>
 
     <footer class="footer">
-        <div align="center" class="container pt-3 pb-3 text-muted">
-        <span>Copyright © <a href="/" class="text-info">PearX Team</a>, <a href="https://en.wikipedia.org/wiki/2018"
-                                                                           class="text-muted">2018</a></span>
-            <br>
+        <div class="footer-content text-muted">
+            <span>Copyright © <a href="/" class="text-info">PearX Team</a>, <a href="https://en.wikipedia.org/wiki/2018" class="text-muted">2018</a>.</span>
             <span>Made with ❤ by <a href="/members#mrapplexz" class="text-info">mrAppleXZ</a></span>
         </div>
     </footer>

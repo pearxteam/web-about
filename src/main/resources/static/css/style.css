@@ -7,7 +7,7 @@ html, body {
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    background-color: #fffbf7;
+    background-color: #111111;
     color: #292929;
 }
 
@@ -21,12 +21,26 @@ body {
     background-color: #292929;
 }
 
+.footer-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    display:block;
+}
+
 .nested {
     flex: 1;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .parallax {
-    background-image: url("/images/photo.jpeg");
+    animation: 2s ease-out 0s 1 fadeIn;
+    background-image: url("/images/parallax.jpg");
+    background-color: black;
     height: 100%;
     color: white;
     background-attachment: fixed;
@@ -39,20 +53,26 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+@keyframes slide {
+    from { transform: translateX(-100%) }
+    to { transform: translateX(0%)}
+}
 
 .parallax-container {
+    animation: slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
     margin-bottom: 10px;
 }
 
 .parallax-header {
     padding: 10px;
-    font-size: 2.5rem;
-    background-color: rgba(41, 41, 41, 0.85);
-    letter-spacing: 7px;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    font-weight: bold;
 }
 
 .parallax-text {
     padding: 3px;
     font-size: 1.3rem;
-    background-color: rgba(41, 41, 41, 0.85);
 }

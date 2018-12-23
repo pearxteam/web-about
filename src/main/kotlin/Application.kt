@@ -10,12 +10,22 @@ import kotlinx.html.*
 import freemarker.cache.*
 import io.ktor.freemarker.*
 import io.ktor.content.*
+import io.ktor.features.CachingHeaders
 import io.ktor.http.content.*
 import io.ktor.locations.*
 
 fun Application.webAbout() {
     install(FreeMarker) {
         templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates")
+    }
+
+    install(CachingHeaders) {
+        options { cont ->
+            if(cont.contentType?.withoutParameters() == ContentType.Text.Html)
+                null
+            else
+                CachingOptions(CacheControl.MaxAge(60 * 60 * 24 * 3))
+        }
     }
 
     routing {
