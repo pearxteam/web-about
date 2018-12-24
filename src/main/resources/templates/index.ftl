@@ -1,8 +1,10 @@
 <#include "macros/page.ftl" />
 
-<@page title="Home" selected="home">
+<@page title="Home" selected="home" footer=false>
     <div class="parallax">
-        <div class="parallax-container"><span class="parallax-header">PearX Team</span></div>
-        <div class="parallax-container"><span class="parallax-text">A small team that develops something</span></div>
+        <div class="parallax-container">
+            <div class="parallax-header">PearX Team</div>
+            <div class="parallax-text">A small team that develops something</div>
+        </div>
     </div>
 </@page>
