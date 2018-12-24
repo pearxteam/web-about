@@ -1,4 +1,4 @@
-<#macro page title="" selected="" footer=true>
+<#macro page title="" selected="">
     <!doctype html>
     <html lang="en">
     <head>
@@ -25,16 +25,6 @@
     <div class="nested">
         <#nested/>
     </div>
-
-    <#if footer>
-        <footer class="footer">
-            <div class="footer-content text-muted">
-                <span>Copyright © <a href="/" class="text-info">PearX Team</a>, <a
-                            href="https://en.wikipedia.org/wiki/2018" class="text-muted">2018</a>.</span>
-                <span>Made with ❤ by <a href="/members#mrapplexz" class="text-info">mrAppleXZ</a></span>
-            </div>
-        </footer>
-    </#if>
     </body>
     </html>
 </#macro>
